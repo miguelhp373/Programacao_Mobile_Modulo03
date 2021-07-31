@@ -20,6 +20,14 @@ namespace Primeiro_App_em_Xamarin
             lblMetrosResp.Text = ms.ToString("0.00") + " m/s";
             lblMilhasResp.Text = mph.ToString("0.00") + " mph";
         }
+
+        private void Limpar(object sender, EventArgs e)
+        {
+            kmh = ms = mph = 0;
+            txtKm.Text = "";
+            lblMetrosResp.Text = "...";
+            lblMilhasResp.Text = "...";
+        }
         public MainPage()
         {
             InitializeComponent();
