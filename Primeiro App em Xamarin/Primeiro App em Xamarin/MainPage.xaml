@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Primeiro_App_em_Xamarin.MainPage">
+
+    <StackLayout BackgroundColor="PowderBlue">
+        <BoxView BackgroundColor="White"/>
+        <Label
+            x:Name="lblTitulo"
+            Text="Conversão de Velocidades"
+            FontSize="28" FontAttributes="Bold" TextColor="Black"
+            HorizontalTextAlignment="Center"
+            Margin="0,20,0,10"
+            />
+
+        <Label
+            x:Name="lblKm"
+            Text="Velocidade em KM/h"
+            FontSize="22" FontAttributes="Bold" TextColor="DarkBlue"
+            HorizontalTextAlignment="Center"
+            Margin="0,10,0,10"
+            />
+
+        <Entry
+            x:Name="txtKm"
+            Placeholder="Entre com a velocidade em Km/h"
+            FontSize="22" FontAttributes="Bold" TextColor="DarkBlue"
+            HorizontalTextAlignment="Center"
+            Margin="10"
+            />
+
+        <Label
+            x:Name="lblTituloResposta"
+            Text="Resultados:"
+            BackgroundColor="DarkBlue"
+            FontSize="22" FontAttributes="Bold" TextColor="White"
+            HorizontalTextAlignment="Center"
+            Margin="0,20,0,0"
+            
+            />
+
+        <Label
+            x:Name="lblMetros"
+            Text="Velocidade em m/s"
+            FontSize="22" FontAttributes="Bold" TextColor="DarkBlue"
+            HorizontalTextAlignment="Center"
+            Margin="0,10,0,10"
+            />
+
+        <Label
+            x:Name="lblMetrosResp"
+            Text="..."
+            FontSize="26" FontAttributes="Bold" TextColor="Black"
+            HorizontalTextAlignment="Center"
+            
+            />
+
+        <Label
+            x:Name="lblMilhas"
+            Text="Velocidade em mph"
+            FontSize="22" FontAttributes="Bold" TextColor="DarkBlue"
+            HorizontalTextAlignment="Center"
+            Margin="0,10,0,10"
+            />
+
+        <Label
+            x:Name="lblMilhasResp"
+            Text="..."
+            FontSize="26" FontAttributes="Bold" TextColor="Black"
+            HorizontalTextAlignment="Center"
+            
+            />
+
+        <Button
+            x:Name="btnCalcular"
+            Text="Calcular"
+            FontSize="22" FontAttributes="Bold"
+            BackgroundColor="White"
+            TextColor="Black"
+            CornerRadius="20"
+            Margin="20,30,20,10"
+            Clicked="Calcular"
+            />
+
+        <Button
+            x:Name="btnLimpar"
+            Text="Limpar"
+            FontSize="22" FontAttributes="Bold"
+            BackgroundColor="White"
+            TextColor="Black"
+            CornerRadius="20"
+            Margin="20,10,20,10"
+            Clicked="Limpar"
+            />
+
+    </StackLayout>
+
+</ContentPage>
