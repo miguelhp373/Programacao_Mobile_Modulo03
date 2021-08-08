@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App_Conversor_de_Temperatura
+namespace App_Calculadora
 {
     public partial class App : Application
     {

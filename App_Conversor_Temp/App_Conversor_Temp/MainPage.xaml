@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Conversor_Temp.MainPage">
+
+    <StackLayout BackgroundColor="#F3F3F3">
+        <Frame BackgroundColor="#1e90ff" Padding="21" CornerRadius="0">
+            <Label 
+                Text="Conversor de Temperaturas" 
+                HorizontalTextAlignment="Center" 
+                TextColor="#FFF" 
+                FontSize="20" 
+                FontAttributes="Bold" 
+                FontFamily="Arial sans-serif"
+            />
+        </Frame>
+
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label
+                Text="Temperatura:" 
+                TextColor="#576574"  
+                FontSize="18" 
+                Margin="10, 10, 0, 0"
+            />
+
+            <Entry 
+                x:Name="FieldTemperature"
+                Grid.Row="1"
+                Grid.Column="0"
+                Keyboard="Numeric"
+            />
+
+            <Label 
+                Text="°C"
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="27"
+            />
+
+            <Label 
+                Text="Escolha a Conversão:" 
+                Grid.Column="0"
+                Grid.Row="3" 
+                TextColor="#576574"  
+                FontSize="18" 
+                Margin="10, 10, 0, 0"
+             />
+
+            <RadioButton 
+                x:Name="RdButton01"
+                Grid.Column="0" 
+                Grid.Row="4"  
+                
+                TextColor="#222f3e"
+                Margin="10, 10, 0, 0"
+                
+                Content="fahrenheit"
+                Value="Fahrenheit"
+                IsChecked="true"
+            />
+            
+            <RadioButton 
+                x:Name="RdButton02"
+                Grid.Column="1" 
+                Grid.Row="4"  
+                
+                TextColor="#222f3e"  
+                Margin="10, 10, 0, 0"
+                
+                Content="Kelvin"     
+                Value="Kelvin"
+            />
+
+           
+
+            <BoxView Grid.Row="6"/>
+        </Grid>
+        <Label 
+                Text="Resultado:" 
+                Grid.Row="6"
+                TextColor="#576574"  
+                FontSize="24"
+                HorizontalTextAlignment="Center"
+        />
+
+        <Label 
+                x:Name="LabelResult"
+                Text="..."
+                TextColor="#222f3e" 
+                FontSize="20"
+                HorizontalTextAlignment="Center"       
+        />
+
+        <BoxView/>
+        
+
+
+        <FlexLayout 
+            JustifyContent="Center" 
+            AlignItems="Center"
+            Direction="Column"
+        >
+            <Button 
+                x:Name="ConverterButton"
+                Clicked="Converter"
+                
+                Text="Converter"
+                CornerRadius="12"
+                FontSize="18"
+                WidthRequest="380"
+                Margin="12"
+                BackgroundColor="#2e86de"
+                TextColor="#FFF"
+            />
+
+            <Button 
+                x:Name="ClearButton"
+                Clicked="Clear"
+                
+                Text="Limpar"
+                CornerRadius="12"
+                FontSize="18"
+                WidthRequest="380"
+                Margin="12"
+                BackgroundColor="#2e86de"
+                TextColor="#FFFF"
+            />
+        </FlexLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
