@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConversorDeMoedas.MainPage">
+
+    <ScrollView BackgroundColor="#D0D4C3">
+        <StackLayout Margin="15">
+            <BoxView/>
+
+            <Label
+                Text="Conversor de Moedas"
+                FontSize="26" FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                TextColor="#2d3436"
+                />
+
+            <!--<Image Source="https://comoinvestir.thecap.com.br/wp-content/uploads/2020/05/moedas-negociadas-na-bolsa.jpg"/>-->
+
+            <Label
+                Text="Valor a Ser Convertido:"
+                Style="{StaticResource lblTitulos}"
+                />
+            <Entry x:Name="txtValor" Placeholder="Informe o Valor"
+                   Style="{StaticResource txtValores}"
+                />
+
+            <Label
+                Text="Selecione Moeda de Origem:"
+                Style="{StaticResource lblTitulos}"
+                />
+
+            <Picker x:Name="moedaOrigemPick"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                />
+
+            <Label
+                Text="Selecione Moeda de Destino:"
+                Style="{StaticResource lblTitulos}"
+                />
+
+            <Picker x:Name="MoedaDestinoPick"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    />
+
+            <Grid RowSpacing="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button
+                    x:Name="btnCalcular"
+                    Grid.Column="0" Grid.Row="0"
+                    Text="Converter"
+                    Style="{StaticResource botaoPrincipal}"
+                    Clicked="Converter"
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    WidthRequest="380"
+                    />
+
+                <Button
+                    x:Name="btnLimpar"
+                    Grid.Column="0" Grid.Row="1" 
+                    Text="Limpar"
+                    Style="{StaticResource botaoSecundario}"
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    WidthRequest="380"
+                    Clicked="LimparCampos"
+                    />
+
+            </Grid>
+
+            <ActivityIndicator
+                x:Name="waitActivityIndicator"
+                IsRunning="False"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Color="#808080"
+                />
+
+            <Label
+                x:Name="lblMsg1"
+                Text="Nenhuma Conversão Realizada"
+                Style="{StaticResource lblResposta}"
+                />
+
+            <Label
+                x:Name="lblMsg2"
+                Text="..."
+                Style="{StaticResource lblResposta}"
+                />
+
+        </StackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
