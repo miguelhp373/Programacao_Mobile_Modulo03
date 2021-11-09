@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gerenciador_de_filmes_e_series.Droid.Views.PageSeriesDetalhes"
+             Title="Detalhes das Séries"
+             BackgroundColor="#588333">
+
+    <ScrollView >
+        <StackLayout Margin="2" BackgroundColor="WhiteSmoke">
+            <Label
+                Text="Nome"
+                Style="{StaticResource lblTitulosSeries}"
+                />
+            <Entry
+                x:Name="txtNome"
+                Style="{StaticResource txt}"
+                />
+            <Label
+                Text="Gênero"
+                Style="{StaticResource lblTitulosSeries}"
+                />
+
+            <Entry
+                x:Name="txtGenero"
+                Style="{StaticResource txt}"
+                />
+
+            <Label
+                Text="Número de Temporadas"
+                Style="{StaticResource lblTitulosSeries}"
+                />
+
+            <Entry
+                x:Name="txtTemporadas"
+                Keyboard="Numeric"
+                Style="{StaticResource txt}"
+                />
+
+            <Label
+                Text="Onde assistir"
+                Style="{StaticResource lblTitulosSeries}"
+                />
+
+            <Picker
+                x:Name="pikerPlataformaSeries" 
+                Style="{StaticResource cbb}"
+                />
+
+            <Label
+                Text="Imagem"
+                Style="{StaticResource lblTitulosSeries}"
+                />
+
+
+            <Grid 
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,0.2*">
+
+                <Entry
+                    x:Name="txtURLCapaSerie"
+                    Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource txt}"
+                    Margin="15,0,0,0"
+                />
+
+                <Button
+                    Grid.Row="0" Grid.Column="1"
+                    ImageSource="refresh.png"
+                    BackgroundColor="WhiteSmoke"
+                    Clicked="VisualizarCapaSerie"
+                    Margin="0,0,15,0"
+                    />
+
+            </Grid>
+
+            <Image    
+                x:Name="imgSerie"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                Margin="5"
+            />
+
+
+            <Grid Padding="10"
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,*,*">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Editar"
+                    Style="{StaticResource btnSeries}"
+                    Clicked="Editar"
+                    />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Salvar"
+                    Style="{StaticResource btnSeries}"
+                    Clicked="SalvarSerie"
+                    />
+
+                <Button
+                    Grid.Column="2"
+                    Text="Excluir"
+                    Style="{StaticResource btnApagar}"
+                    Clicked="ExcluirSerie"
+                    />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

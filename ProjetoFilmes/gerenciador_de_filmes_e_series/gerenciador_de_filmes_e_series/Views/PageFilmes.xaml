@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gerenciador_de_filmes_e_series.Droid.Views.PageFilmes"    
+             Title="Filmes"
+             BackgroundColor="#3D689B">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="AdicionarFilme" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView >
+        <StackLayout>
+
+            <SearchBar x:Name="FilmeSearchBar" TextChanged="OnTextChanged" BackgroundColor="WhiteSmoke"/>
+
+            <ListView x:Name="listView" Margin="2" RowHeight="100" ItemSelected="OnListViewSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10"
+                                  RowDefinitions="Auto,Auto"
+                                  ColumnDefinitions="70,Auto">
+
+                                <Image
+                                    Grid.RowSpan="2"
+                                    Source="{Binding URLCapaFilme}"
+                                    Aspect="AspectFit"
+                                    HeightRequest="63"
+                                    WidthRequest="60"
+                                    />
+
+                                <Label
+                                    Grid.Column="1" Grid.Row="0"
+                                    Text="{Binding PlataformaFilme}"
+                                    FontSize="14"
+                                    FontAttributes="Italic"
+                                    VerticalOptions="Center"
+                                    />
+
+                                <Label
+                                    Grid.Column="1" Grid.Row="1"
+                                    Text="{Binding NomeFilme}"
+                                    FontSize="22"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Start"
+                                    HorizontalOptions="Center"
+                                    />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

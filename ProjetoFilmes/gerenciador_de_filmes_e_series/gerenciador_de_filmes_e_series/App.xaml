@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gerenciador_de_filmes_e_series.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="lblTitulos" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="Margin" Value="10,10,10,0"/>
+            </Style>
+
+
+            <Style x:Key="lblTitulosFilmes" TargetType="Label" BasedOn="{StaticResource lblTitulos}">
+                <Setter Property="TextColor" Value="#3D689B"/>
+            </Style>
+
+            <Style x:Key="lblTitulosSeries" TargetType="Label" BasedOn="{StaticResource lblTitulos}">
+                <Setter Property="TextColor" Value="#588333"/>
+            </Style>
+
+            <Style x:Key="lblTitulosPlataformas" TargetType="Label" BasedOn="{StaticResource lblTitulos}">
+                <Setter Property="TextColor" Value="DimGray"/>
+            </Style>
+
+            <Style x:Key="txt" TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+                <Setter Property="Margin" Value="15,0,15,0"/>
+            </Style>
+
+            <Style x:Key="cbb" TargetType="Picker">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
+                <Setter Property="Margin" Value="15,0,15,0"/>
+            </Style>
+
+            <Style x:Key="btn" TargetType="Button">
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="btnFilmes" TargetType="Button" BasedOn="{StaticResource btn}">
+                <Setter Property="BackgroundColor" Value="#3D689B"/>
+            </Style>
+
+            <Style x:Key="btnSeries" TargetType="Button" BasedOn="{StaticResource btn}">
+                <Setter Property="BackgroundColor" Value="#588333"/>
+            </Style>
+
+            <Style x:Key="btnPlataformas" TargetType="Button" BasedOn="{StaticResource btn}">
+                <Setter Property="BackgroundColor" Value="DimGray"/>
+            </Style>
+
+            <Style x:Key="btnApagar" TargetType="Button" BasedOn="{StaticResource btn}">
+                <Setter Property="BackgroundColor" Value="DarkRed"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

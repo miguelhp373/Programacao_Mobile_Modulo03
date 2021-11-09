@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gerenciador_de_filmes_e_series.Droid.Views.PageFilmesDetalhes"    
+             Title="Detalhes dos Filmes"
+             BackgroundColor="#3D689B">
+
+    <ScrollView >
+        <StackLayout Margin="2" BackgroundColor="WhiteSmoke">
+            <Label
+                Text="Nome"
+                Style="{StaticResource lblTitulosFilmes}"
+                />
+            <Entry
+                x:Name="txtNome"
+                Style="{StaticResource txt}"
+                />
+            <Label
+                Text="Gênero"
+                Style="{StaticResource lblTitulosFilmes}"
+                />
+
+            <Entry
+                x:Name="txtGenero"
+                Style="{StaticResource txt}"
+                />
+
+            <Label
+                Text="Duração (minutos)"
+                Style="{StaticResource lblTitulosFilmes}"
+                />
+
+            <Entry
+                x:Name="txtDuracao"
+                Keyboard="Numeric"
+                Style="{StaticResource txt}"
+                />
+
+            <Label
+                Text="Onde assistir"
+                Style="{StaticResource lblTitulosFilmes}"
+                />
+
+            <Picker
+                x:Name="pikerPlataformaFilmes" 
+                Style="{StaticResource cbb}"
+                />
+
+            <Label
+                Text="Imagem"
+                Style="{StaticResource lblTitulosFilmes}"
+                />
+
+
+            <Grid 
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,0.2*">
+
+                <Entry
+                    x:Name="txtURLCapaFilme"
+                    Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource txt}"
+                    Margin="15,0,0,0"
+                />
+
+                <Button
+                    Grid.Row="0" Grid.Column="1"
+                    ImageSource="refresh.png"
+                    BackgroundColor="WhiteSmoke"
+                    Clicked="VisualizarCapaFilme"
+                    Margin="0,0,15,0"
+                    />
+
+            </Grid>
+
+            <Image    
+                x:Name="imgFilme"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                Margin="5"
+            />
+
+
+            <Grid Padding="10"
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,*,*">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Editar"
+                    Style="{StaticResource btnFilmes}"
+                    Clicked="Editar"
+                    />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Salvar"
+                    Style="{StaticResource btnFilmes}"
+                    Clicked="SalvarFilme"
+                    />
+
+                <Button
+                    Grid.Column="2"
+                    Text="Excluir"
+                    Style="{StaticResource btnApagar}"
+                    Clicked="ExcluirFilme"
+                    />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

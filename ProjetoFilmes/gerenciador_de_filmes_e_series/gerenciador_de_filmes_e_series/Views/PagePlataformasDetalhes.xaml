@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gerenciador_de_filmes_e_series.Droid.Views.PagePlataformasDetalhes"    
+             Title="Plataformas"
+             BackgroundColor="DimGray">
+
+    <ScrollView BackgroundColor="DimGray">
+        <StackLayout Margin="1" BackgroundColor="WhiteSmoke">
+            <Label
+                Text="Nome"
+                Style="{StaticResource lblTitulosPlataformas}"
+                />
+
+            <Entry
+                x:Name="txtNome"
+                Style="{StaticResource txt}"
+                
+                />
+
+            <Label
+                Text="Valor da assinatura mensal"
+                Style="{StaticResource lblTitulosPlataformas}"
+                />
+
+            <Entry
+                x:Name="txtAssinatura"
+                Keyboard="Numeric"
+                Style="{StaticResource txt}"
+                
+                />
+
+            <Label
+                Text="Imagem"
+                Style="{StaticResource lblTitulosPlataformas}"
+                />
+
+            <Grid 
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,0.2*">
+
+                <Entry
+                    x:Name="txtURLLogoPlataforma"
+                    Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource txt}"
+                    Margin="15,0,0,0"
+                />
+
+                <Button
+                    Grid.Row="0" Grid.Column="1"
+                    ImageSource="refresh.png"
+                    BackgroundColor="WhiteSmoke"
+                    Clicked="VisualizarLogoPlataforma"
+                    Margin="0,0,15,0"
+                    />
+
+            </Grid>
+
+            <Image    
+                x:Name="imgPlataforma"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                Margin="5"
+            />
+
+            <Grid Padding="10"
+                  RowDefinitions="35"
+                  ColumnDefinitions="*,*,*">
+
+                <Button
+                    Grid.Column="0"
+                    Text="Editar"
+                    Style="{StaticResource btnPlataformas}"
+                    Clicked="Editar"
+                    />
+
+                <Button
+                    Grid.Column="1"
+                    Text="Salvar"
+                    Style="{StaticResource btnPlataformas}"
+                    Clicked="SalvarPlataforma"
+                    />
+
+                <Button
+                    Grid.Column="2"
+                    Text="Excluir"
+                    Style="{StaticResource btnApagar}"
+                    Clicked="ExcluirPlataforma"
+                    />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
